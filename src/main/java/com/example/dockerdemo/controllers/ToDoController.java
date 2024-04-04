@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("api/todo/")
+@RestController
+@RequestMapping("/api/todo")
 public class ToDoController {
 
-    @GetMapping("all")
+    @GetMapping("/all")
     public List<ToDoModel> getAllToDo(){
         return List.of(
                 new ToDoModel(1, "Buy Milk", false),
@@ -19,4 +20,3 @@ public class ToDoController {
         );
     }
 }
-
